@@ -77,13 +77,17 @@ const ListItem = props => {
           {subtitle}
         </div>
       </ListItem.Header>
-      <ListItem.Body>{props.children}</ListItem.Body>
+      {props.children && <ListItem.Body>{props.children}</ListItem.Body>}
+      {/* <ListItem.Body>{props.children}</ListItem.Body> */}
       <ListItem.Footer>{actions}</ListItem.Footer>
     </ListItem.Element>
   )
 }
 
 ListItem.Element = styled.li`
+  /* The item if a flex container, we'll probably turn it 
+  into a grid container down the road when we think about responsive. 
+  If you build CSS ontop of this component, don't rely on been a flex container for ever */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -102,13 +106,11 @@ ListItem.Header = styled.div`
   grid-template-columns: auto 1fr;
   grid-gap: ${spacing.small};
   align-items: center;
+  word-break: break-all;
 `
 
 ListItem.Body = styled.div`
   flex: 1;
-  :empty {
-    display: none;
-  }
 `
 
 ListItem.Footer = styled.div`

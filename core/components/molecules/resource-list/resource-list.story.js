@@ -96,8 +96,8 @@ storiesOf('Resource List').add('actions', () => (
         </ResourceList.Item>
       )}
       actions={[
-        { label: 'Delete', icon: 'delete', handler: function() {} },
-        { label: 'Settings', icon: 'settings', handler: function() {} }
+        { label: 'Delete', icon: 'delete', handler: function () { } },
+        { label: 'Settings', icon: 'settings', handler: function () { } }
       ]}
     />
   </Example>
@@ -117,8 +117,8 @@ storiesOf('Resource List').add('actions as buttons', () => (
         </ResourceList.Item>
       )}
       actions={[
-        <Button icon="settings" onClick={() => {}} label="Settings" />,
-        <Button icon="delete" onClick={() => {}} label="Delete" />
+        <Button icon="settings" onClick={() => { }} label="Settings" />,
+        <Button icon="delete" onClick={() => { }} label="Delete" />
       ]}
     />
   </Example>
@@ -135,7 +135,7 @@ storiesOf('Resource List').add('action overrides', () => (
           subtitle: 'Subtitle Three',
           image: IMAGE_URLS[2],
           id: 'ghi789',
-          actions: [{ label: 'Settings', icon: 'settings', handler: function() {} }]
+          actions: [{ label: 'Settings', icon: 'settings', handler: function () { } }]
         }
       ]}
       renderItem={item => (
@@ -144,8 +144,8 @@ storiesOf('Resource List').add('action overrides', () => (
         </ResourceList.Item>
       )}
       actions={[
-        { label: 'Delete', icon: 'delete', handler: function() {} },
-        { label: 'Settings', icon: 'settings', handler: function() {} }
+        { label: 'Delete', icon: 'delete', handler: function () { } },
+        { label: 'Settings', icon: 'settings', handler: function () { } }
       ]}
     />
   </Example>
@@ -161,13 +161,28 @@ storiesOf('Resource List').add('stressed', () => (
           subtitle:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula massa augue, in consectetur tellus tristique ut.',
           actions: [
-            { label: 'Settings', icon: 'settings', handler: function() {} },
-            { label: 'Settings', icon: 'settings', handler: function() {} },
-            { label: 'Settings', icon: 'settings', handler: function() {} },
-            { label: 'Settings', icon: 'settings', handler: function() {} },
-            { label: 'Settings', icon: 'settings', handler: function() {} },
-            { label: 'Settings', icon: 'settings', handler: function() {} },
-            { label: 'Settings', icon: 'settings', handler: function() {} }
+            { label: 'Settings', icon: 'settings', handler: function () { } },
+            { label: 'Settings', icon: 'settings', handler: function () { } },
+            { label: 'Settings', icon: 'settings', handler: function () { } },
+            { label: 'Settings', icon: 'settings', handler: function () { } },
+            { label: 'Settings', icon: 'settings', handler: function () { } },
+            { label: 'Settings', icon: 'settings', handler: function () { } },
+            { label: 'Settings', icon: 'settings', handler: function () { } }
+          ]
+        },
+        {
+          title:
+            'LoremipsumdolorsitametconsecteturadipiscingelitCrasvehiculamasLoremipsumdolorsitametconsecteturadipiscingelitCrasvehiculamassasa',
+          subtitle:
+            'LoremipsumdolorsitametconsecteturadipiscingelitCrasvehiculamasLoremipsumdolorsitametconsecteturadipiscingelitCrasvehiculamassasa',
+          actions: [
+            { label: 'Settings', icon: 'settings', handler: function () { } },
+            { label: 'Settings', icon: 'settings', handler: function () { } },
+            { label: 'Settings', icon: 'settings', handler: function () { } },
+            { label: 'Settings', icon: 'settings', handler: function () { } },
+            { label: 'Settings', icon: 'settings', handler: function () { } },
+            { label: 'Settings', icon: 'settings', handler: function () { } },
+            { label: 'Settings', icon: 'settings', handler: function () { } }
           ]
         },
         {
@@ -176,28 +191,13 @@ storiesOf('Resource List').add('stressed', () => (
           subtitle:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula massa augue, in consectetur tellus tristique ut.',
           actions: [
-            { label: 'Settings', icon: 'settings', handler: function() {} },
-            { label: 'Settings', icon: 'settings', handler: function() {} },
-            { label: 'Settings', icon: 'settings', handler: function() {} },
-            { label: 'Settings', icon: 'settings', handler: function() {} },
-            { label: 'Settings', icon: 'settings', handler: function() {} },
-            { label: 'Settings', icon: 'settings', handler: function() {} },
-            { label: 'Settings', icon: 'settings', handler: function() {} }
-          ]
-        },
-        {
-          title:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula massa augue, in consectetur tellus tristique ut.',
-          subtitle:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula massa augue, in consectetur tellus tristique ut.',
-          actions: [
-            { label: 'Settings', icon: 'settings', handler: function() {} },
-            { label: 'Settings', icon: 'settings', handler: function() {} },
-            { label: 'Settings', icon: 'settings', handler: function() {} },
-            { label: 'Settings', icon: 'settings', handler: function() {} },
-            { label: 'Settings', icon: 'settings', handler: function() {} },
-            { label: 'Settings', icon: 'settings', handler: function() {} },
-            { label: 'Settings', icon: 'settings', handler: function() {} }
+            { label: 'Settings', icon: 'settings', handler: function () { } },
+            { label: 'Settings', icon: 'settings', handler: function () { } },
+            { label: 'Settings', icon: 'settings', handler: function () { } },
+            { label: 'Settings', icon: 'settings', handler: function () { } },
+            { label: 'Settings', icon: 'settings', handler: function () { } },
+            { label: 'Settings', icon: 'settings', handler: function () { } },
+            { label: 'Settings', icon: 'settings', handler: function () { } }
           ]
         }
       ]}
