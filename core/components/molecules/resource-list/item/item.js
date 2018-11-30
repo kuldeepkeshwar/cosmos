@@ -61,7 +61,7 @@ const ListItem = props => {
   }
 
   if (props.actions) {
-    actions = <ButtonGroup align="right">{resolveActions(props.actions, props.item)}</ButtonGroup>
+    actions = <ButtonGroup>{resolveActions(props.actions, props.item)}</ButtonGroup>
   }
 
   return (
@@ -85,7 +85,9 @@ const ListItem = props => {
 
 ListItem.Element = styled.li`
   display: flex;
-  flex-flow: row nowrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   border-top: 1px solid ${colors.list.borderColor};
   padding: ${spacing.small} ${spacing.xsmall};
   cursor: ${props => (props.onClick ? 'pointer' : 'inherit')};
@@ -95,30 +97,21 @@ ListItem.Element = styled.li`
 `
 
 ListItem.Header = styled.div`
-  flex-basis: 40%;
-  flex-flow: row nowrap;
-  flex-grow: 1;
-  display: flex;
+  flex: 1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: ${spacing.small};
   align-items: center;
-  ${StyledAvatar} {
-    margin-right: ${spacing.small};
-  }
 `
 
 ListItem.Body = styled.div`
-  flex-basis: 40%;
-  flex-flow: row nowrap;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
+  flex: 1;
+  :empty {
+    display: none;
+  }
 `
 
 ListItem.Footer = styled.div`
-  flex-basis: 20%;
-  flex-flow: row nowrap;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
 `
 
 ListItem.Subtitle = styled(StyledTextAllCaps)`
