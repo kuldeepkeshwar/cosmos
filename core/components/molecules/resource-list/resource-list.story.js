@@ -86,15 +86,15 @@ storiesOf('Resource List').add('actions', () => (
   <Example title="default">
     <ResourceList
       items={[
-        { title: 'Title One', subtitle: 'Subtitle One', image: IMAGE_URLS[0], id: 'abc123' },
-        { title: 'Title Two', subtitle: 'Subtitle Two', image: IMAGE_URLS[1], id: 'def456' },
+        { title: 'Title One Title OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle OneTitle One', subtitle: 'Subtitle One', image: IMAGE_URLS[0], id: 'abc123 khgd dkjhds dskj dfjkh fdskjh dsfkjhdfs kjdfhs kdfsjh dfskjhdfs kfdjsh dfskjhdfs lkdfjh dfskljhdf kljdfhs dfksljh dfskdfjh kjdfslh dfjksh dfsjkhdfs lhkfds hkldfsjhdf skjdfhs kjdfsh kjdfh sdflkjhdf kshldfsk jhdf kljdfsh kjdfsh kfjh dfslhk' },
+        { title: 'Title Two', subtitle: 'Subtitle Two', image: IMAGE_URLS[1], id: 'def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456def456' },
         { title: 'Title Three', subtitle: 'Subtitle Three', image: IMAGE_URLS[2], id: 'ghi789' }
       ]}
-      renderItem={item => (
-        <ResourceList.Item {...item}>
-          ID: <Code>{item.id}</Code>
-        </ResourceList.Item>
-      )}
+      // renderItem={item => (
+      //   <ResourceList.Item {...item}>
+      //     ID: <Code>{item.id}</Code>
+      //   </ResourceList.Item>
+      // )}
       actions={[
         { label: 'Delete', icon: 'delete', handler: function () { } },
         { label: 'Settings', icon: 'settings', handler: function () { } }

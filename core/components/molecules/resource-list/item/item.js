@@ -78,16 +78,12 @@ const ListItem = props => {
         </div>
       </ListItem.Header>
       {props.children && <ListItem.Body>{props.children}</ListItem.Body>}
-      {/* <ListItem.Body>{props.children}</ListItem.Body> */}
-      <ListItem.Footer>{actions}</ListItem.Footer>
+      {props.actions && <ListItem.Footer>{actions}</ListItem.Footer>}
     </ListItem.Element>
   )
 }
 
 ListItem.Element = styled.li`
-  /* The item if a flex container, we'll probably turn it 
-  into a grid container down the road when we think about responsive. 
-  If you build CSS ontop of this component, don't rely on been a flex container for ever */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -98,26 +94,37 @@ ListItem.Element = styled.li`
   &:hover {
     background: ${colors.list.backgroundHover};
   }
+  * {
+    outline: 1px solid red;
+  }
 `
 
 ListItem.Header = styled.div`
   flex: 1;
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-gap: ${spacing.small};
+  display: flex;
   align-items: center;
   word-break: break-all;
+  margin-right: ${spacing.small};
+
+  ${StyledAvatar} {
+    /* This is a magic number */
+    margin-right: 12px;
+  }
 `
 
 ListItem.Body = styled.div`
   flex: 1;
+  margin-right: ${spacing.small};
 `
 
 ListItem.Footer = styled.div`
+background: #000;
+width: 30px;
+height: 40px;
 `
 
 ListItem.Subtitle = styled(StyledTextAllCaps)`
-  margin-top: ${spacing.xsmall};
+  margin-top: ${spacing.xxsmall};
   display: block;
 `
 
