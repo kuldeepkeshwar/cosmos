@@ -94,8 +94,8 @@ ListItem.Element = styled.li`
   &:hover {
     background: ${colors.list.backgroundHover};
   }
-  * {
-    outline: 1px solid red;
+  > *:not(:last-child) {
+    margin-right: ${spacing.small};
   }
 `
 
@@ -104,7 +104,6 @@ ListItem.Header = styled.div`
   display: flex;
   align-items: center;
   word-break: break-all;
-  margin-right: ${spacing.small};
 
   ${StyledAvatar} {
     /* This is a magic number */
@@ -114,13 +113,9 @@ ListItem.Header = styled.div`
 
 ListItem.Body = styled.div`
   flex: 1;
-  margin-right: ${spacing.small};
 `
 
 ListItem.Footer = styled.div`
-background: #000;
-width: 30px;
-height: 40px;
 `
 
 ListItem.Subtitle = styled(StyledTextAllCaps)`
