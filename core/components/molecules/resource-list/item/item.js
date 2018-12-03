@@ -113,6 +113,13 @@ ListItem.Header = styled.div`
 
 ListItem.Body = styled.div`
   flex: 1;
+
+  /* This is not mobile first, but it avoids negation of margin */
+  @media screen and (max-width: 768px) {
+    flex: 1 0 100%;
+    order: 1;
+    margin-top: ${spacing.small};
+  }
 `
 
 ListItem.Footer = styled.div`
